@@ -1,4 +1,16 @@
-map<char,int>ma;
+//{ Driver Code Starts
+#include <bits/stdc++.h>
+using namespace std;
+
+
+// } Driver Code Ends
+//User function Template for C++
+
+class Solution {
+  public:
+    int countOfSubstrings(string s, int k) {
+        // code here
+        map<char,int>ma;
         int n=s.size();
         int i;
         deque<int>dq;
@@ -26,3 +38,23 @@ map<char,int>ma;
             }
         }
         return c;
+    }
+};
+
+//{ Driver Code Starts.
+
+int main() {
+    int t;
+    cin >> t;
+    while (t--) {
+        string S;
+        int K;
+        cin>>S;
+        cin>>K;
+
+        Solution ob;
+        cout << ob.countOfSubstrings(S,K) << endl;
+    }
+    return 0;
+}
+// } Driver Code Ends
